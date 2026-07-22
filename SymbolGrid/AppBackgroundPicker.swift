@@ -1,12 +1,19 @@
+//
+//  AppBackgroundPicker.swift
+//  SymbolGrid
+//
+//  Created by user on 7/12/26.
+//
+
 import SwiftUI
 
-struct AppBackground: View {
+struct AppBackgroundPicker: View {
     var body: some View {
         LinearGradient(
             colors: [
-                AppBackgroundColors.start,
-                AppBackgroundColors.middle,
-                AppBackgroundColors.end
+                AppBackgroundPickerColors.start,
+                AppBackgroundPickerColors.middle,
+                AppBackgroundPickerColors.end
             ],
             startPoint: .topLeading,
             endPoint: .bottomTrailing
@@ -15,12 +22,12 @@ struct AppBackground: View {
     }
 }
 
-enum AppBackgroundColors {
+enum AppBackgroundPickerColors {
     static var start: Color {
-        Color.namedOrFallback("AppBackgroundStart", fallback: Color(red: 1.0, green: 0.98, blue: 0.85))
+        Color.namedOrFallback("AppBackgroundPickerStart", fallback: Color(red: 1.0, green: 0.98, blue: 0.85))
     }
     static var middle: Color {
-        Color.namedOrFallback("AppBackgroundMiddle", fallback: Color(red: 1.0, green: 0.90, blue: 0.60))
+        Color.namedOrFallback("AppBackgroundPickerStart", fallback: Color(red: 1.0, green: 0.90, blue: 0.60))
     }
     static var end: Color {
         Color.namedOrFallback("AppBackgroundEnd", fallback: Color(red: 1.0, green: 0.75, blue: 0.40))
@@ -43,5 +50,5 @@ private extension Color {
 }
 
 #Preview("AppBackground Preview") {
-    AppBackground()
+    AppBackgroundPicker()
 }

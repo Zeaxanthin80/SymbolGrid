@@ -2,6 +2,13 @@
 //  Symbol.swift.swift
 //  SymbolGrid
 //
-//  Created by user on 7/11/26.
+//  Created by Jose Marquez on 7/11/26.
 //
 
+import SwiftUI
+
+
+struct Symbol : Identifiable, Equatable {
+    var id = UUID()
+    var name : String
+}
